@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<link rel="stylesheet" href="/style.css">
+<title>기록 다이어리</title>
+</head>
+<body>
+
+<header>
+    <h1>기록 다이어리</h1>
+    <nav>
+        <ul class="nav-links">
+            <li><a href="http://localhost:8080/login">Log In</a></li>
+            <li><a href="http://localhost:8080/join">Sign Up</a></li>
+        </ul>
+    </nav>
+</header>
+
+<main>
+    <div class="post-list">
+        <h2>목록</h2>
+        <ul id="posts">
+            <% posts.forEach(post => { %>
+                <li>
+                    <a href="/post/<%= post._id %>">
+                        <div><strong>제목:</strong> <%= post.title %></div>
+                        <div><strong>일시:</strong> <%= post.date %></div>
+                    </a>
+                </li>
+            <% }); %>
+        </ul>
+    </div>
+</main>
+
+<footer>
+    <a href="/newpost" class="new-post-button">새 게시글</a>
+</footer>
+
+</body>
+</html>

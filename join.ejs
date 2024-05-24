@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>회원가입</title>
+    <link rel="stylesheet" href="/style.css">
+</head>
+<body>
+    <header>
+        <h1>회원가입</h1>
+        <nav>
+            <ul class="nav-links">
+                <li><a href="/">Home</a></li>
+                <li><a href="/login">Log In</a></li>
+            </ul>
+        </nav>
+    </header>
+    <main>
+        <form action="/join" method="POST">
+            <h4>회원가입</h4>
+            <div>아이디 <input type="text" name="id"></div>
+            <div>비밀번호 <input type="password" name="pw"></div>
+            <button type="submit">회원가입</button>
+        </form>
+    </main>
+</body>
+</html>

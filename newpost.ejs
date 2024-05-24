@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <title>Create Post</title>
+</head>
+<body>
+<header>
+    <h1>새 게시물</h1>
+    <nav>
+        <ul class="nav-links">
+            <li><a href="/">Home</a></li>
+            <li><a href="/login">Log In</a></li>
+            <li><a href="/join">Sign Up</a></li>
+        </ul>
+    </nav>
+</header>
+
+<main>
+    <form id="newpost-form" action="/newpost" method="POST">
+        <div class="form-group">
+            <label for="title">제목</label>
+            <input type="text" id="title" name="title" required>
+        </div>
+        <div class="form-group">
+            <label for="content">내용</label>
+            <textarea id="content" name="content" rows="6" required></textarea>
+        </div>
+        <div class="form-group">
+            <label for="image">사진</label>
+            <input type="file" id="image" name="image">
+        </div>
+        <div class="form-group">
+            <label for="summary">요약</label>
+            <textarea id="summary" name="summary" rows="3"></textarea>
+        </div>
+        <div class="form-group">
+            <button href="/" type="submit">게시</button>
+        </div>
+    </form>
+</main>
+
+</body>
+</html>

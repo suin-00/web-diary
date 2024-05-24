@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<link rel="stylesheet" href="/style.css">
+<title><%= post.title %></title>
+</head>
+<body>
+
+<header>
+    <h1><%= post.title %></h1>
+    <nav>
+        <ul class="nav-links">
+            <li><a href="/">Home</a></li>
+            <li><a href="/login">Log In</a></li>
+            <li><a href="/join">Sign Up</a></li>
+        </ul>
+    </nav>
+</header>
+
+<main>
+    <article>
+        <div><strong>작성일:</strong> <%= post.date %></div>
+        <div><strong>내용:</strong> <p><%= post.content %></p></div>
+        <% if (post.image) { %>
+            <div><img src="<%= post.image %>" alt="게시글 이미지"></div>
+        <% } %>
+        <div><strong>요약:</strong> <p><%= post.summary %></p></div>
+    </article>
+</main>
+
+
+</body>
+</html>
